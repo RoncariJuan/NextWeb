@@ -273,12 +273,6 @@ p, span, a, button {
       .main-content{
         min-height: 900px;
       }
-      body{
-        width: 390px;
-      }
-      header{
-        width: 10px !important;
-      }
     }
    
     #faq {
