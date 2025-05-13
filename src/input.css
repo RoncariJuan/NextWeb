@@ -155,7 +155,7 @@ p, span, a, button {
     .main-content {
       position: relative;
       z-index: 2;
-      min-height: 800px; /* Altura fixa igual ao particles-js */
+      min-height: 1200px; /* Altura fixa igual ao particles-js */
       display: flex;
       align-items: center;
       justify-content: center;
