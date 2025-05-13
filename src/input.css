@@ -273,7 +273,7 @@ p, span, a, button {
       .main-content{
         min-height: 1200px;
       }
-      header{
+      body{
         max-width: 390px;
       }
     }
