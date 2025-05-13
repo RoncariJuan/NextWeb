@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+
+# Bloqueia acesso a arquivos sensíveis
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /*.xml$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+Disallow: /*.env$
+Disallow: /*.log$
+Disallow: /*.md$
+Disallow: /*.git$
+Disallow: /*.svn$
+
+# Sitemap
+Sitemap: https://nextweb.com.br/sitemap.xml 
