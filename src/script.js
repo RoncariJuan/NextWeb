@@ -153,25 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
     animateOnScroll();
 
     // Funcionalidade do FAQ
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        
-        // Fechar todas as outras respostas
-        document.querySelectorAll('.faq-answer').forEach(item => {
-          if (item !== answer) {
-            item.classList.remove('active');
-            item.previousElementSibling.setAttribute('aria-expanded', 'false');
-          }
-        });
-
-        // Alternar estado atual
-        button.setAttribute('aria-expanded', !isExpanded);
-        if (!isExpanded) {
-          answer.classList.add('active');
-        } else {
-          answer.classList.remove('active');
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('hidden');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+        if (isOpen) {
+          answer.classList.remove('hidden');
         }
       });
     });
