@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "NextWeb - Desenvolvimento Web Profissional",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify"
-  },
+  "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+  "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify && cp ./src/index.html ./dist/"
+},
   "keywords": [
     "desenvolvimento web",
     "sites",
