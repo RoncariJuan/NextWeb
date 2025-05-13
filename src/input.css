@@ -273,6 +273,9 @@ p, span, a, button {
       .main-content{
         min-height: 900px;
       }
+      body{
+        width: auto;
+      }
     }
    
     #faq {
