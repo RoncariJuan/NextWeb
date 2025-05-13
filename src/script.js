@@ -1,73 +1,59 @@
-document.addEventListener('DOMContentLoaded', function() {
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: '#6366f1'
-        },
-        shape: {
-          type: 'circle'
-        },
-        opacity: {
-          value: 0.5,
-          random: false,
-          anim: {
-            enable: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true
-        },
-        line_linked: {
+// Inicialização do particles.js com configuração embutida
+document.addEventListener('DOMContentLoaded', function () {
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 200,
+        density: {
           enable: true,
-          distance: 150,
-          color: '#6366f1',
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: 'none',
-          random: false,
-          straight: false,
-          out_mode: 'out',
-          bounce: false
+          value_area: 800
         }
       },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: {
-            enable: true,
-            mode: 'repulse'
-          },
-          onclick: {
-            enable: true,
-            mode: 'push'
-          },
-          resize: true
-        },
-        modes: {
-          repulse: {
-            distance: 100,
-            duration: 0.4
-          },
-          push: {
-            particles_nb: 4
-          }
-        }
+      color: { value: "#a855f7" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000000" },
+        polygon: { nb_sides: 5 }
       },
-      retina_detect: true
-    });
-
+      opacity: {
+        value: 0.8,
+        random: false
+      },
+      size: {
+        value: 5,
+        random: true
+      },
+      line_linked: {
+        enable: true,
+        distance: 80,
+        color: "#a855f7",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 5,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        repulse: { distance: 50 },
+        push: { particles_nb: 10 }
+      }
+    },
+    retina_detect: true
+  });
+});
     // Animação de deslize para as seções
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
@@ -152,15 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Executar uma vez ao carregar para animar seções visíveis
     animateOnScroll();
 
-    // Funcionalidade do FAQ
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const answer = btn.nextElementSibling;
-        const isOpen = answer.classList.contains('hidden');
-        document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
-        if (isOpen) {
-          answer.classList.remove('hidden');
-        }
+    document.querySelectorAll("#faq-accordion button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        const icon = btn.querySelector("svg");
+        const content = btn.nextElementSibling;
+  
+        btn.setAttribute("aria-expanded", !expanded);
+        icon.classList.toggle("rotate-180");
+        content.classList.toggle("hidden");
       });
     });
-  });
