@@ -276,6 +276,9 @@ p, span, a, button {
       body{
         width: 430px;
       }
+      header{
+        width: auto;
+      }
     }
    
     #faq {
