@@ -225,6 +225,7 @@ p, span, a, button {
     }
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
     #servicos {
       position: relative;
