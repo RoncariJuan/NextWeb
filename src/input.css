@@ -269,7 +269,7 @@ p, span, a, button {
       }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 390px) {
       .main-content{
         min-height: 900px;
       }
@@ -277,7 +277,7 @@ p, span, a, button {
         width: 390px;
       }
       header{
-        width: 385px !important;
+        width: 10px !important;
       }
     }
    
