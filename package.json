@@ -1,10 +1,22 @@
 {
+  "name": "nextweb",
+  "version": "1.0.0",
+  "description": "NextWeb - Desenvolvimento Web Profissional",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify"
   },
+  "keywords": [
+    "desenvolvimento web",
+    "sites",
+    "sistemas web",
+    "batatais"
+  ],
+  "author": "NextWeb",
+  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^4.1.6"
   }
 }
